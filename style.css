@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* reference: 
+https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900
+*/
+/* start of index's front section */
+.center {
+ text-align: center;
+}
+
+.article-gap {
+ height: 80px;
+}
+
+.navbar {
+ padding: 60px;
+}
+
+.introsection {
+ color: #fef6e6;
+ background-color: #232323;
+}
+
+.navbar-brand {
+ font-weight: bold;
+ text-decoration: underline;
+}
+
+.blockquote-footer {
+ font-size: 50%;
+ color: #fef6e6;
+ font-family: "Roboto", sans-serif;
+ font-weight: 300;
+}
+/* end of index's front section */
+
+h1 {
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: 700;
+}
+
+.h1Span {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 40%;
+ font-weight: 400;
+ color: #ea8f10;
+}
+
+.btn {
+ background-color: #ea8f10;
+ color: #232323;
+}
+
+#inspiringThings {
+ padding: 80px;
+}
+
+#inspiringThings h2 {
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: 700;
+ font-size: 400%;
+}
+
+#inspiringThings ul {
+ font-size: 120%;
+ font-family: "Roboto", sans-serif;
+}
+
+#testimonials {
+ padding: 80px;
+ background-color: #fef6e6;
+}
