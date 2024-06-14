@@ -31,6 +31,29 @@ https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,4
  font-family: "Roboto", sans-serif;
  font-weight: 300;
 }
+
+/* start of hoverable dropdown menu */
+.dropdown:hover .dropdown-menu {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ box-sizing: border-box;
+}
+.dropdown-menu {
+ display: none;
+ padding: 0px;
+ margin: 0px;
+ border-radius: 10px;
+}
+.dropdown-item {
+ padding: 10px;
+}
+.dropdown-item:hover {
+ border-radius: 10px;
+ background-color: #ddd;
+}
+/* end of hoverable dropdown menu */
+
 /* end of index's front section */
 
 h1 {
