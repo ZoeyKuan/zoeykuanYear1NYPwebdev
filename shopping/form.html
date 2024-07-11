@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Payment Form</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="style.css" text="text/css">
+ <style>
+  .card {text-align: justify; display: block; height: 85vh; overflow-y: auto; overflow-x: hidden;}
+  .container-fluid {height: 100vh;}
+ </style>
+</head>
+
+<!-- useful id:
+ displayTotalBill - is the $total
+ -->
+
+<!-- reference: https://github.com/mdbootstrap/bootstrap-payment-forms?tab=readme-ov-file -->
+
+<body onload="loadAll()">
+
+ <div class="container-fluid p-5 row justify-content-center">
+  <div class="card col-md-11 p-5 pt-4">
+   <div class="d-flex justify-content-between align-items-center mb-2">
+     <div class="d-flex flex-row align-items-center">
+       <h4 class="text-uppercase mt-1">tarot cards</h4>
+       <span class="ms-2 me-3">Payment</span>
+     </div>
+     <a href="../shopping_cart.html">Cancel and return to the website</a>
+   </div>
+ 
+   <div class="row">
+
+    <!-- start of bill and card -->
+     <div class="col-md-7 col-lg-7 col-xl-6 mb-4">
+       <h5 id="displayTotal" class="mb-0 text-success">$0.00</h5>
+       <div>
+        <div class="overflow-auto" id="displayTotalBill"></div>
+        <!-- location of where bill items are inputted -->
+         <hr />
+         <div class="d-flex justify-content-between align-items-start">
+           <div class="d-flex flex-row">
+             <h6>Credit card payment</h6>
+           </div>
+           <div class="d-flex flex-row align-items-center text-primary">
+             <span class="ms-1">Add Payment card</span>
+           </div>
+         </div>
+
+         <!-- start of choosing card -->
+         <div class="d-flex flex-column mt-3 mb-3">
+           <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+             <input
+               type="radio"
+               class="btn-check"
+               name="options"
+               id="option1"
+               autocomplete="off"
+             />
+             <label class="btn btn-outline-primary btn-lg" for="option1">
+               <div class="d-flex justify-content-between">
+                 <span>VISA </span>
+                 <span>**** 5436</span>
+               </div>
+             </label>
+ 
+             <input
+               type="radio"
+               class="btn-check"
+               name="options"
+               id="option2"
+               autocomplete="off"
+               checked
+             />
+             <label class="btn btn-outline-primary btn-lg" for="option2">
+               <div class="d-flex justify-content-between">
+                 <span>MASTER CARD </span>
+                 <span>**** 5038</span>
+               </div>
+             </label>
+
+           </div>
+         </div>
+         <!-- end of choosing card -->
+
+         <a onclick="checkout()" href="response.html" class="btn btn-success btn-lg btn-block">Proceed to payment</a>
+       </div>
+     </div>
+    <!-- end of bill and card -->
+
+     <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
+       <div class="p-3" style="background-color: #eee;">
+         <span id="title" class="fw-bold">Fill in your personal details</span>
+         <div class="d-flex justify-content-between mt-2">
+          <label for="name">Full name </label>
+          <input id="name" type="text" class="userInfo"/>
+         </div>
+         <div class="d-flex justify-content-between mt-2">
+          <label for="address">Address </label>
+          <input id="address" type="text" class="userInfo"/>
+         </div>
+         <div class="d-flex justify-content-between mt-2">
+          <label for="postalcode">Postal Code </label>
+          <input id="postalcode" type="text" class="userInfo"/>
+         </div>
+         <div class="d-flex justify-content-between mt-2">
+          <label for="email">Email </label>
+          <input id="email" type="email" class="userInfo"/>
+         </div>
+         <div class="d-flex justify-content-between mt-2">
+          <label for="phonenumber">Phone number </label>
+          <input id="phonenumber" type="text" class="userInfo"/>
+         </div>
+         <hr />
+         <div class="d-flex justify-content-between mt-2">
+           <span>GST </span> <span id="gst">$0.00</span>
+         </div>
+         <div class="d-flex justify-content-between mt-2">
+           <span>Delivery fee </span> <span id="deliveryfee">$1.00</span>
+         </div>
+         <hr />
+         <div class="d-flex justify-content-between mt-2">
+           <span>Total </span> <span id="finalTotal" class="text-success">$0.00</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+  </div>
+ </div>
+ <script text="text/js" src="form.js"></script>
+</body>
+</html>
