@@ -32,6 +32,11 @@ https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,4
  font-weight: 300;
 }
 
+th, td {
+ border: 1px solid;
+ padding: 10px;
+}
+
 /* start of hoverable dropdown menu */
 .dropdown:hover .dropdown-menu {
  display: flex;
@@ -45,18 +50,18 @@ https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,4
  margin: 0px;
  border-radius: 10px;
 }
-.dropdown-item {
- padding: 10px;
+.dropdown-menu:hover {
+ background-color: #ddd;
 }
 .dropdown-item:hover {
- border-radius: 10px;
  background-color: #ddd;
 }
 /* end of hoverable dropdown menu */
 
 /* end of index's front section */
 
-h1 {
+
+h1, .navbar-brand {
  font-family: 'Times New Roman', Times, serif;
  font-weight: 700;
 }
