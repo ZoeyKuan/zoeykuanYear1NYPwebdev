@@ -10,8 +10,8 @@ function loadAll(){
    // create the html for data to be inputted into
    var payHtml = `<div class="d-flex mt-3 justify-content-between">
    <div class="d-flex flex-column mt-1 text-dark">
-     <h6>${dic[key][0]}</h6>
-     <h6 class="price fw-bold text-success ms-1">$${dic[key][1]}</h6>
+     <h6>${dic[key][0]} x${dic[key][3]}</h6>
+     <h6 class="price fw-bold text-success">$${dic[key][1]}</h6>
    </div>
    <img src="${dic[key][2]}" alt="${dic[key][0]}">
    </div>`;
