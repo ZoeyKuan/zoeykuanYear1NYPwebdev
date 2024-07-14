@@ -16,7 +16,7 @@ function toggleBill(){
 }
 
 costID.addEventListener('click', function() {
- localStorage.setItem('bill', JSON.stringify(cartDictionary));
+ sessionStorage.setItem('bill', JSON.stringify(cartDictionary));
  costID.href = 'form.html';
 });
 billToggleBtn.addEventListener('click', toggleBill, false);

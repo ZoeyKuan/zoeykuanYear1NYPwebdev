@@ -3,7 +3,7 @@ const uInfo = document.getElementsByClassName('userInfo');
 var total = 0;
 
 function loadAll(){
- const buying = JSON.parse(localStorage.getItem('bill'));
+ const buying = JSON.parse(sessionStorage.getItem('bill'));
  var payList = [];
  buying.forEach((dic) => {
   for (var key in dic){
@@ -42,12 +42,12 @@ function checkout(){
   userInfo.push(insert);
  }
  userInfo.push(total);
- localStorage.setItem('userInformation', JSON.stringify(userInfo));
+ sessionStorage.setItem('userInformation', JSON.stringify(userInfo));
  console.log(userInfo);
 }
 
 function thanks(){
- var userInfo = JSON.parse(localStorage.getItem('userInformation'));
+ var userInfo = JSON.parse(sessionStorage.getItem('userInformation'));
  const title = document.getElementById('title');
  const t = userInfo.pop();
  title.innerHTML = 'Thank you for purchasing with us!';
