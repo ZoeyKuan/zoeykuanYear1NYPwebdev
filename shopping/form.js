@@ -35,6 +35,7 @@ function displayFees(payList){
  document.getElementById('finalTotal').innerHTML ='$'+((total * 0.1)+total).toFixed(2);
 }
 
+// maybe change checkout into a get form method?
 function checkout(){
  var userInfo = [];
  for (i=0;i<uInfo.length;i++){
