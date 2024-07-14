@@ -37,7 +37,6 @@ function displayFees(payList){
 
 function checkout(){
  var userInfo = [];
- // for some reason this html content cannot be iterated with foreach. why?
  for (i=0;i<uInfo.length;i++){
   var insert = uInfo[i].value;
   userInfo.push(insert);
