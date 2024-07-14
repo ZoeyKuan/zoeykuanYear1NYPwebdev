@@ -2,7 +2,7 @@
 body { overflow-x: hidden; }
 
 /* for some reason bootstrap automatically sets the height to 70% of viewport */
-.container-fluid { height: 100vh; }
+.container-fluid { height: 100vh; width: 100vh; }
 
 #cart-amount {
  position: relative;

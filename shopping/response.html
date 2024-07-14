@@ -7,54 +7,57 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  <link rel="stylesheet" href="style.css" text="text/css">
  <style>
-  .container-md {
+  .container-fluid {
+   height: 100vh;
+   width: 100vh;
+   margin: auto;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
   }
-  img {height: 150px; width: 224px;}
+  #displayTotalBill {
+   max-height: 30vh;
+  }
+  img {width: 220px;}
  </style>
 </head>
 <body onload="thanks()">
  <div class="container-fluid">
-  <div class="container-md">
-   <div class="col align-items-center justify-content-center col-md-5 col-lg-4 col-xl-4">
-    <div class="p-3" style="background-color: #eee;">
-      <span id="title" class="fw-bold">Thank you for your purchase!</span>
-      <div class="overflow-auto" id="displayTotalBill"></div>
-      <div class="d-flex justify-content-between mt-2">
-       <label for="name">Full name </label>
-       <input id="name" type="text" class="userInfo"/>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-       <label for="address">Address </label>
-       <input id="address" type="text" class="userInfo"/>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-       <label for="postalcode">Postal Code </label>
-       <input id="postalcode" type="text" class="userInfo"/>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-       <label for="email">Email </label>
-       <input id="email" type="email" class="userInfo"/>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-       <label for="phonenumber">Phone number </label>
-       <input id="phonenumber" type="text" class="userInfo"/>
-      </div>
-      <hr />
-      <div class="d-flex justify-content-between mt-2">
-        <span>GST </span> <span id="gst">$0.00</span>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-        <span>Delivery fee </span> <span id="deliveryfee">$1.00</span>
-      </div>
-      <hr />
-      <div class="d-flex justify-content-between mt-2">
-        <span>Total </span> <span id="finalTotal" class="text-success">$0.00</span>
-      </div>
+  <div class="col-8 align-items-center justify-content-center p-3" style="background-color: #eee;">
+    <span id="title" class="fw-bold">Thank you for your purchase!</span>
+    <div class="overflow-auto" id="displayTotalBill"></div>
+    <div class="d-flex justify-content-between mt-2">
+     <label for="name">Full name </label>
+     <input id="name" type="text" class="userInfo"/>
     </div>
-   </div>
+    <div class="d-flex justify-content-between mt-2">
+     <label for="address">Address </label>
+     <input id="address" type="text" class="userInfo"/>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+     <label for="postalcode">Postal Code </label>
+     <input id="postalcode" type="text" class="userInfo"/>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+     <label for="email">Email </label>
+     <input id="email" type="email" class="userInfo"/>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+     <label for="phonenumber">Phone number </label>
+     <input id="phonenumber" type="text" class="userInfo"/>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-between mt-2">
+      <span>GST </span> <span id="gst">$0.00</span>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+      <span>Delivery fee </span> <span id="deliveryfee">$1.00</span>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-between mt-2">
+      <span>Total </span> <span id="finalTotal" class="text-success">$0.00</span>
+    </div>
   </div>
  </div>
  <script src="form.js"></script>
