@@ -44,17 +44,12 @@ th, td {
  justify-content: space-around;
  box-sizing: border-box;
 }
-.dropdown-menu {
- display: none;
- padding: 0px;
- margin: 0px;
- border-radius: 10px;
-}
 .dropdown-menu:hover {
  background-color: #ddd;
 }
-.dropdown-item:hover {
- background-color: #ddd;
+a {
+ text-decoration: none;
+ color: #232323;
 }
 /* end of hoverable dropdown menu */
 
