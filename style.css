@@ -3,6 +3,7 @@
 https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900
 */
 /* start of index's front section */
+/* kebab-casing */
 .center {
  text-align: center;
 }
@@ -61,7 +62,7 @@ h1, .navbar-brand {
  font-weight: 700;
 }
 
-.h1Span {
+.h1-span {
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  font-size: 40%;
  font-weight: 400;
@@ -73,17 +74,17 @@ h1, .navbar-brand {
  color: #232323;
 }
 
-#inspiringThings {
+#inspiring-things {
  padding: 80px;
 }
 
-#inspiringThings h2 {
+#inspiring-things h2 {
  font-family: 'Times New Roman', Times, serif;
  font-weight: 700;
  font-size: 400%;
 }
 
-#inspiringThings ul {
+#inspiring-things ul {
  font-size: 120%;
  font-family: "Roboto", sans-serif;
 }

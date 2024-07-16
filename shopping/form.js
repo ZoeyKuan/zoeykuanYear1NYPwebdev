@@ -1,4 +1,4 @@
-const displayTotalBill = document.getElementById('displayTotalBill');
+const displayTotalBill = document.getElementById('display-total-bill');
 const uInfo = document.getElementsByClassName('userInfo');
 var total = 0;
 

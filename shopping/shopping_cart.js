@@ -2,8 +2,8 @@ let cartDictionary = [];
 const cartAmountDisplay = document.getElementById('cart-amount');
 let cartAmount = 0;
 const costID = document.getElementById('cost');
-const priceDisplay = document.getElementById('priceDisplay');
-const billToggleBtn = document.getElementById("shoppingCartBtn");
+const priceDisplay = document.getElementById('price-display');
+const billToggleBtn = document.getElementById("shopping-cart-btn");
 let revealBill = 0;
 function toggleBill(){
   var bill = document.getElementById("bill");
