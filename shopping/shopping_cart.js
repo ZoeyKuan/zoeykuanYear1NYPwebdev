@@ -5,21 +5,22 @@ const costID = document.getElementById('cost');
 const priceDisplay = document.getElementById('price-display');
 const billToggleBtn = document.getElementById("shopping-cart-btn");
 let revealBill = 0;
-function toggleBill(){
-  var bill = document.getElementById("bill");
-  revealBill = revealBill + 1;
-  if (revealBill % 2 == 1) {
-    bill.style.display = "flex";
-  } else {
-    bill.style.display = "none";
-  }
-}
 
 costID.addEventListener('click', function() {
  sessionStorage.setItem('bill', JSON.stringify(cartDictionary));
  costID.href = 'form.html';
 });
-billToggleBtn.addEventListener('click', toggleBill, false);
+
+billToggleBtn.addEventListener('click', function() {
+ var bill = document.getElementById("bill");
+ revealBill = revealBill + 1;
+ if (revealBill % 2 == 1) {
+   bill.style.display = "flex";
+ } else {
+   bill.style.display = "none";
+ }
+ priceDisplay.scrollIntoView()
+});
 
 function createBillItem(productName, price, image, quantity) {
  toAdd = {yomom: [productName, price, image, quantity]};
