@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Thank you for your purchase!</title>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- <link rel="stylesheet" href="style.css" text="text/css">
+ <link rel="stylesheet" href="shopping_cart_style.css" text="text/css">
  <style>
   .container-fluid {
    height: 100vh;
@@ -16,7 +16,7 @@
    align-items: center;
    justify-content: center;
   }
-  #display-total-bill {
+  #display-bill-items {
    max-height: 30vh;
   }
   img {width: 220px;}
@@ -26,7 +26,7 @@
  <div class="container-fluid">
   <div class="col-8 align-items-center justify-content-center p-3" style="background-color: #eee;">
     <span id="title" class="fw-bold">Thank you for your purchase!</span>
-    <div class="overflow-auto" id="display-total-bill"></div>
+    <div class="overflow-auto" id="display-bill-items"></div>
     <div class="d-flex justify-content-between mt-2">
      <label for="name">Full name </label>
      <input id="name" type="text" class="userInfo"/>
@@ -48,6 +48,9 @@
      <input id="phonenumber" type="text" class="userInfo"/>
     </div>
     <hr />
+    <div class="d-flex justify-content-between mt-2">
+     <span>Before Taxes </span> <span id="display-total">$0.00</span>
+    </div>
     <div class="d-flex justify-content-between mt-2">
       <span>GST </span> <span id="gst">$0.00</span>
     </div>

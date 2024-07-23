@@ -7,8 +7,12 @@ const billToggleBtn = document.getElementById("shopping-cart-btn");
 let revealBill = 0;
 
 costID.addEventListener('click', function() {
- sessionStorage.setItem('bill', JSON.stringify(cartDictionary));
- costID.href = 'form.html';
+ if (cartDictionary.length > 0){
+  sessionStorage.setItem('bill', JSON.stringify(cartDictionary));
+  costID.href = 'form.html';
+ } else {
+  alert('You have not added any items to your cart!');
+ }
 });
 
 billToggleBtn.addEventListener('click', function() {
@@ -19,7 +23,7 @@ billToggleBtn.addEventListener('click', function() {
  } else {
    bill.style.display = "none";
  }
- priceDisplay.scrollIntoView()
+ priceDisplay.scrollIntoView();
 });
 
 function createBillItem(productName, price, image, quantity) {
