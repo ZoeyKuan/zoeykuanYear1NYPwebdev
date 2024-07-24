@@ -5,6 +5,21 @@ let prevMouse; // where it is in pixels on the document
 let prevScroll = 0; // number of pixels going to the left
 let i = 10;
 
+// automatic scrolling but why is it so rough :(
+ // var id = setInterval(autoScroll, 3000);
+
+ function autoScroll(){
+  car.style.scrollBehavior = "smooth";
+  prevScroll += 200;
+  car.scroll(prevScroll, {behaviour: "auto"});
+  console.log(car.getBoundingClientRect().width);
+  console.log(car.scrollLeft);
+  if (car.scrollLeft > prevScroll){
+   car.scrollLeft = 0;
+   prevScroll = 0;
+  }
+ }
+
 car.addEventListener('mousemove', (e) => {
  if (!press) return;
  e.preventDefault();
@@ -13,19 +28,6 @@ car.addEventListener('mousemove', (e) => {
  car.scrollLeft = prevScroll - diffOfNewOld;
 });
 
-// automatic scrolling but why is it so rough :(
-var id = setInterval(autoScroll, 3000);
-
-function autoScroll(){
- car.style.scrollBehavior = "smooth";
- prevScroll += 200;
- car.scroll(prevScroll, {behaviour: "auto"});
- console.log(car.scrollLeft);
- if (car.scrollLeft > 1128){
-  car.scrollLeft = 0;
-  prevScroll = 0;
- }
-}
 
 car.addEventListener('mousedown', (e) => {
  clearInterval(id);
