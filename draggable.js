@@ -6,15 +6,14 @@ let prevScroll = 0; // number of pixels going to the left
 let i = 10;
 
 // automatic scrolling but why is it so rough :(
- // var id = setInterval(autoScroll, 3000);
+ var id = setInterval(autoScroll, 3000);
 
  function autoScroll(){
   car.style.scrollBehavior = "smooth";
   prevScroll += 200;
   car.scroll(prevScroll, {behaviour: "auto"});
-  console.log(car.getBoundingClientRect().width);
-  console.log(car.scrollLeft);
-  if (car.scrollLeft > prevScroll){
+  var scrollLeftMax = car.scrollWidth - car.clientWidth;
+  if (car.scrollLeft > scrollLeftMax){
    car.scrollLeft = 0;
    prevScroll = 0;
   }
