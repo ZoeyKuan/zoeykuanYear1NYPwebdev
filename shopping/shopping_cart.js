@@ -15,7 +15,7 @@ costID.addEventListener('click', function() {
  }
 });
 
-billToggleBtn.addEventListener('click', function() {
+function closeBtn(){
  var bill = document.getElementById("bill");
  revealBill = revealBill + 1;
  if (revealBill % 2 == 1) {
@@ -23,6 +23,10 @@ billToggleBtn.addEventListener('click', function() {
  } else {
    bill.style.display = "none";
  }
+}
+
+billToggleBtn.addEventListener('click', function() {
+ closeBtn();
  priceDisplay.scrollIntoView();
 });
 
@@ -101,17 +105,18 @@ function recreation(){
 }
 
 function updateMonies(event){
+ // maybe you can select the prices from inventory
  const originalPrice = {
-  'Egyptian Tarot Deck': ['Egyptian Tarot Deck', '10.80', 'images/egyptian.jpg', 1],
-  'Tarot Playcards': ['Tarot Playcards', '20.70', 'images/game.jpg', 1],
-  'Latin Tarot Deck': ['Latin Tarot Deck', '13.70', 'images/latin.jpg', 1],
-  'Modern Tarot Deck': ['Modern Tarot Deck', '17.65', 'images/modern.jpg', 1],
-  'Rider Waite Tarot Deck': ['Rider Waite Tarot Deck', '8.18', 'images/riderwaite.jpg', 1],
-  'Zombie Tarot Deck': ['Zombie Tarot Deck', '33.10', 'images/zombie.jpg', 1],
+  'Egyptian Tarot Deck': '10.80',
+  'Tarot Playcards': '20.70',
+  'Latin Tarot Deck': '13.70',
+  'Modern Tarot Deck': '17.65',
+  'Rider Waite Tarot Deck': '8.18',
+  'Zombie Tarot Deck': '33.10',
  };
  let quantity = event.target;
  const i = event.target.id;
- clickedPrice = originalPrice[i][1];
+ clickedPrice = originalPrice[i];
  var clickedImg = document.getElementById(i + 'i');
  clickedImg = 'images' + clickedImg.src.match('/[A-Za-z]+\.[A-Za-z]+$')[0];
  newPrice = parseFloat(clickedPrice) * quantity.value;

@@ -93,3 +93,21 @@ h1, .navbar-brand {
  padding: 80px;
  background-color: #fef6e6;
 }
+
+.draggable {
+ width: 50%;
+ overflow: hidden;
+ /* position: absolute;
+ top: 50%;
+ left: 50%;
+ /* translate LTRB */
+ /* transform: translate(-50%, -50%); */
+}
+.draggable-inner {
+ pointer-events: none;
+ display: flex;
+ gap: 20px;
+}
+.item img {
+ height: 200px;
+}
