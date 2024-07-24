@@ -27,10 +27,15 @@ car.addEventListener('mousemove', (e) => {
  car.scrollLeft = prevScroll - diffOfNewOld;
 });
 
+// car.addEventListener('mouseleave', (e) => {
+//  if (!press) return;
+//  car.style.cursor = 'grabbing';
+// });
 
 car.addEventListener('mousedown', (e) => {
  clearInterval(id);
  car.style.scrollBehavior = "";
+ e.preventDefault();
  press = true;
  car.style.cursor = 'grabbing';
  prevMouse = e.pageX;

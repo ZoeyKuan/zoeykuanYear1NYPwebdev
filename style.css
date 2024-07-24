@@ -95,16 +95,17 @@ h1, .navbar-brand {
 }
 
 img[alt="Rider Waite Tarot Deck for Beginners"] {
- width: 300px;
+ width: 400px;
 }
-
+.shopping-btn {
+ background-color: #ea8f10;
+ padding: 20px;
+ border-radius: 20px;
+ text-align: center;
+ font-weight: 700;
+}
 .draggable {
  overflow: hidden;
- /* position: absolute;
- top: 50%;
- left: 50%;
- /* translate LTRB */
- /* transform: translate(-50%, -50%); */
 }
 .draggable-inner {
  pointer-events: none;
