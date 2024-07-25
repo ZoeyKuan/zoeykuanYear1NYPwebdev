@@ -1,5 +1,6 @@
 const displayBillItems = document.getElementById('display-bill-items');
 const uInfo = document.getElementsByClassName('userInfo');
+const payment = document.querySelector('a[onclick="checkout()"]');
 var total = 0;
 let payList = '';
 
@@ -39,12 +40,18 @@ function loadAll(){
 function checkout(){
  var userInfo = [];
  for (i=0;i<uInfo.length;i++){
+  if (uInfo[i].value == ''){
+   alert('Please fill in the input boxes to proceed.');
+   return;
+  }
   var insert = uInfo[i].value;
   userInfo.push(insert);
  }
  userInfo.push(total);
  sessionStorage.setItem('userInformation', JSON.stringify(userInfo));
- console.log(userInfo);
+ // payment.target = '_new';
+ // payment.href = 'response.html';
+ window.open('/shopping/response.html');
 }
 
 function thanks(){
