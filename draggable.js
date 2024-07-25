@@ -10,10 +10,10 @@ let i = 10;
 
  function autoScroll(){
   car.style.scrollBehavior = "smooth";
-  prevScroll += 200;
+  prevScroll = Math.abs(prevScroll) + 200;
   car.scroll(prevScroll, {behaviour: "auto"});
   var scrollLeftMax = car.scrollWidth - car.clientWidth;
-  if (car.scrollLeft > scrollLeftMax){
+  if (car.scrollLeft >= scrollLeftMax){
    car.scrollLeft = 0;
    prevScroll = 0;
   }
