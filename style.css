@@ -38,6 +38,14 @@ th, td {
  padding: 10px;
 }
 
+.reading p {
+ font-size: 20px;
+}
+
+.about-brand {
+ font-size: 70px;
+}
+
 /* start of hoverable dropdown menu */
 .dropdown:hover .dropdown-menu {
  display: flex;
@@ -114,4 +122,27 @@ img[alt="Rider Waite Tarot Deck for Beginners"] {
 }
 .item img {
  height: 150px;
+}
+
+@media only screen and (max-width: 500px) {
+ .about-brand {
+  font-size: 50px;
+  height: 50vh;
+  width: 100%;
+ }
+ .who { margin: 0; padding: 0; }
+ .mob-who { padding: 0; margin: 0; width: 100%; font-size: small; }
+ th, td {
+  display: table-cell;
+  font-size: small;
+  padding: 2px;
+ }
+ caption { font-size: small;}
+ .book { width: 100%; margin: 0; padding: 0;}
+ .book p { font-size: small; }
+ .reading { display: flex; flex-wrap: wrap; }
+ .reading .col-6 { width: 100%; }
+ .reading .col-6 p { font-size: small;}
+ .reading .col-6 .roboto-medium-spacing { font-size: small;}
+ .reading .col-6 ol { font-size: small; }
 }
