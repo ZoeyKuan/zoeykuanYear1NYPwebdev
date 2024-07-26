@@ -46,6 +46,8 @@ th, td {
  font-size: 70px;
 }
 
+.map { height: 600px; }
+
 /* start of hoverable dropdown menu */
 .dropdown:hover .dropdown-menu {
  display: flex;
@@ -140,11 +142,15 @@ img[alt="Rider Waite Tarot Deck for Beginners"] {
   padding: 2px;
  }
  caption { font-size: small;}
+
  .book { width: 100%; margin: 0; padding: 0;}
  .book p { font-size: small; }
+
  .reading { display: flex; flex-wrap: wrap; }
  .reading .col-6 { width: 100%; }
- .reading .col-6 p { font-size: small;}
- .reading .col-6 .roboto-medium-spacing { font-size: small;}
+ .reading .col-6 p { font-size: small; text-align: center; }
+ .reading .col-6 .roboto-medium-spacing { font-size: small; text-align: center; }
  .reading .col-6 ol { font-size: small; }
+
+ .map { height: 90%; display: block;}
 }
