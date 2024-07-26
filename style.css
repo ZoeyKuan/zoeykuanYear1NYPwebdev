@@ -57,6 +57,7 @@ th, td {
  background-color: #ddd;
 }
 a {
+ cursor: pointer;
  text-decoration: none;
  color: #232323;
 }
@@ -113,6 +114,7 @@ img[alt="Rider Waite Tarot Deck for Beginners"] {
  font-weight: 700;
 }
 .draggable {
+ display: block;
  overflow: hidden;
 }
 .draggable-inner {
