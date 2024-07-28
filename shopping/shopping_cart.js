@@ -15,8 +15,9 @@ costID.addEventListener('click', function() {
  }
 });
 
+// https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/change_event
 // for mobile v where u hide all the items when bill is open
-let mob = window.matchMedia("(max-width: 500px)");
+let mob = window.matchMedia('(max-width: 500px)');
 let toHide = document.getElementsByClassName('py-3');
 
 function closeBtn(){

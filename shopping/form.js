@@ -6,10 +6,7 @@ let payList = '';
 
 function loadAll(){
  const buying = JSON.parse(sessionStorage.getItem('bill'));
- console.log(buying);
- // var payList = '';
  buying.forEach((dic) => {
-  console.log('dic looks like ', dic);
   for (var key in dic){
    // create the html for data to be inputted into
    console.log(key);
@@ -35,8 +32,6 @@ function loadAll(){
  document.getElementById('finalTotal').innerHTML ='$'+((total * 0.1)+total).toFixed(2);
 }
 
-
-// maybe change checkout into a get form method?
 function checkout(){
  var userInfo = [];
  for (i=0;i<uInfo.length;i++){
