@@ -17,6 +17,7 @@ costID.addEventListener('click', function() {
 
 // for mobile v where u hide all the items when bill is open
 let mob = window.matchMedia("(max-width: 500px)");
+let toHide = document.getElementsByClassName('py-3');
 
 function closeBtn(){
  var bill = document.getElementById("bill");
@@ -33,9 +34,6 @@ function closeBtn(){
   document.querySelector('.shopfor-mob').style.display = '';
  }
 }
-
-let toHide = document.getElementsByClassName('py-3');
-
 
 billToggleBtn.addEventListener('click', function() {
  closeBtn();

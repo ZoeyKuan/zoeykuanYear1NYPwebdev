@@ -20,13 +20,17 @@
    max-height: 30vh;
   }
   img {width: 220px;}
+  @media only screen and (max-width: 500px) {
+   .container-fluid { width: auto; }
+   #display-bill-items { overflow-x: hidden; overflow-y: auto; }
+  }
  </style>
 </head>
 <body onload="thanks()">
  <div class="container-fluid">
   <div class="col-8 align-items-center justify-content-center p-3" style="background-color: #eee;">
     <span id="title" class="fw-bold">Thank you for your purchase!</span>
-    <div class="overflow-auto" id="display-bill-items"></div>
+    <div class="overflow-sm-auto" id="display-bill-items"></div>
     <div class="d-flex justify-content-between mt-2">
      <label for="name">Full name </label>
      <input id="name" type="text" class="userInfo"/>

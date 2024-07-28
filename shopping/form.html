@@ -12,17 +12,13 @@
  </style>
 </head>
 
-<!-- useful id:
- display-totalBill - is the $total
- -->
-
 <!-- reference: https://github.com/mdbootstrap/bootstrap-payment-forms?tab=readme-ov-file -->
 
 <body onload="loadAll()">
 
  <div class="container-fluid p-5 row justify-content-center">
   <div class="card col-md-11 p-5 pt-4">
-   <div class="d-flex justify-content-between align-items-center mb-2">
+   <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
      <div class="d-flex flex-row align-items-center">
        <h4 class="text-uppercase mt-1">tarot cards</h4>
        <span class="ms-2 me-3">Payment</span>
@@ -47,35 +43,35 @@
      <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
        <div class="p-3" style="background-color: #eee;">
          <span id="title" class="fw-bold">Fill in your personal details</span>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
           <label for="name">Full name </label>
           <input id="name" type="text" class="userInfo"/>
          </div>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
           <label for="address">Address </label>
           <input id="address" type="text" class="userInfo"/>
          </div>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
           <label for="postalcode">Postal Code </label>
           <input id="postalcode" type="text" class="userInfo"/>
          </div>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
           <label for="email">Email </label>
           <input id="email" type="email" class="userInfo"/>
          </div>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
           <label for="phonenumber">Phone number </label>
           <input id="phonenumber" type="text" class="userInfo"/>
          </div>
          <hr />
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
            <span>GST </span> <span id="gst">$0.00</span>
          </div>
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
            <span>Delivery fee </span> <span id="deliveryfee">$1.00</span>
          </div>
          <hr />
-         <div class="d-flex justify-content-between mt-2">
+         <div class="d-flex flex-wrap justify-content-between mt-2">
            <span>Total </span> <span id="finalTotal" class="text-success">$0.00</span>
          </div>
        </div>
