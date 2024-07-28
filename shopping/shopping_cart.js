@@ -15,6 +15,9 @@ costID.addEventListener('click', function() {
  }
 });
 
+// for mobile v where u hide all the items when bill is open
+let mob = window.matchMedia("(max-width: 500px)");
+
 function closeBtn(){
  var bill = document.getElementById("bill");
  revealBill = revealBill + 1;
@@ -23,12 +26,28 @@ function closeBtn(){
  } else {
    bill.style.display = "none";
  }
+ if (mob.matches) {
+  for (i=0; i<toHide.length; i++){
+   toHide[i].style.display = '';
+  }
+  document.querySelector('.shopfor-mob').style.display = '';
+ }
 }
+
+let toHide = document.getElementsByClassName('py-3');
+
 
 billToggleBtn.addEventListener('click', function() {
  closeBtn();
  priceDisplay.scrollIntoView();
+ if (mob.matches){
+  for (i=0; i<toHide.length; i++){
+   toHide[i].style.display = 'none';
+  }
+  document.querySelector('.shopfor-mob').style.display = 'none';
+ }
 });
+
 
 function createBillItem(productName, price, image, quantity) {
  toAdd = {yomom: [productName, price, image, quantity]};

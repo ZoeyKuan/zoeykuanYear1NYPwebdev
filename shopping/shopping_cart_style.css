@@ -139,3 +139,40 @@ button[class="col-6"] {
 #costAndClose {
  height: 10%;
 }
+
+@media only screen and (max-width: 500px) {
+ .shopfor-mob {
+  width: 100%;
+ }
+ .shopfor-mob .col-1 {
+  margin-right: 20px;
+ }
+ * .py-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* display: none; */
+ }
+ .py-3 * {
+  width: 100%;
+ }
+ .py-3 button {
+  padding: 10px;
+ }
+ .py-3 img {
+  height: auto;
+  width: 100%;
+ }
+ h1 { font-size: 40px; }
+ #bill {
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+ }
+ #costAndClose {
+  position: absolute;
+  width: 100%;
+ }
+ 
+}
