@@ -96,8 +96,9 @@ body { overflow-x: hidden; }
  -webkit-transform: translateX(0);
  transform: translateX(0);
  }
- }
- @keyframes slideInRight {
+}
+
+@keyframes slideInRight {
  0% {
  -webkit-transform: translateX(100%);
  transform: translateX(100%);
@@ -165,7 +166,6 @@ button[class="col-6"] {
  }
  h1 { font-size: 40px; }
  #bill {
-  display: block;
   margin: auto;
   width: 100%;
   position: absolute;
