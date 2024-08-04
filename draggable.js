@@ -24,12 +24,12 @@ car.addEventListener('mousemove', (e) => {
  e.preventDefault();
  diffOfNewOld = e.pageX - prevMouse;
  // if you plus then it will go in a pull direction
- car.scrollLeft = prevScroll - diffOfNewOld;
+ car.scrollLeft = prevScroll + diffOfNewOld;
 });
 
 // car.addEventListener('mouseleave', (e) => {
 //  if (!press) return;
-//  car.style.cursor = 'grabbing';
+//  document.style.cursor = 'grabbing';
 // });
 
 car.addEventListener('mousedown', (e) => {
