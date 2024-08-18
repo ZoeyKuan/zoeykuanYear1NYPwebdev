@@ -11,7 +11,7 @@ let i = 10;
  function autoScroll(){
   car.style.scrollBehavior = "smooth";
   prevScroll = Math.abs(prevScroll) + 200;
-  car.scroll(prevScroll, {behaviour: "auto"});
+  car.scroll(prevScroll, {behaviour: "smooth"});
   var scrollLeftMax = car.scrollWidth - car.clientWidth;
   if (car.scrollLeft >= scrollLeftMax){
    car.scrollLeft = 0;
@@ -24,13 +24,17 @@ car.addEventListener('mousemove', (e) => {
  e.preventDefault();
  diffOfNewOld = e.pageX - prevMouse;
  // if you plus then it will go in a pull direction
- car.scrollLeft = prevScroll + diffOfNewOld;
+ car.scrollLeft = prevScroll - diffOfNewOld;
 });
 
-// car.addEventListener('mouseleave', (e) => {
-//  if (!press) return;
-//  document.style.cursor = 'grabbing';
-// });
+car.addEventListener('mouseleave', () => {
+ if (!press) return;
+ document.style.cursor = 'grabbing';
+});
+
+car.addEventListener('mouseenter', ()=>{
+ car.style.cursor = 'grab';
+});
 
 car.addEventListener('mousedown', (e) => {
  clearInterval(id);
@@ -42,7 +46,7 @@ car.addEventListener('mousedown', (e) => {
  prevScroll = car.scrollLeft;
 });
 
-car.addEventListener('mouseup', (e) => {
+car.addEventListener('mouseup', () => {
  press = false;
  car.style.cursor = 'grab';
  id = setInterval(autoScroll, 3000);
