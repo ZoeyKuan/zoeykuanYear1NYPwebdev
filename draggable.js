@@ -9,9 +9,10 @@ let i = 10;
  var id = setInterval(autoScroll, 3000);
 
  function autoScroll(){
-  car.style.scrollBehavior = "smooth";
+  car.classList.add('smooth-scrolling');
+  car.style.scrollBehavior = "smooth !important";
   prevScroll = Math.abs(prevScroll) + 200;
-  car.scroll(prevScroll, {behaviour: "smooth"});
+  car.scroll(prevScroll, {behaviour: "smooth !important"});
   var scrollLeftMax = car.scrollWidth - car.clientWidth;
   if (car.scrollLeft >= scrollLeftMax){
    car.scrollLeft = 0;
@@ -38,7 +39,7 @@ car.addEventListener('mouseenter', ()=>{
 
 car.addEventListener('mousedown', (e) => {
  clearInterval(id);
- car.style.scrollBehavior = "";
+ car.classList.toggle('smooth-scrolling');
  e.preventDefault();
  press = true;
  car.style.cursor = 'grabbing';

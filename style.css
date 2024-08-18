@@ -118,6 +118,9 @@ img[alt="Rider Waite Tarot Deck for Beginners"] {
  display: block;
  overflow: hidden;
 }
+.smooth-scrolling{
+ scroll-behavior: smooth !important;
+}
 .draggable-inner {
  pointer-events: none;
  display: flex;
