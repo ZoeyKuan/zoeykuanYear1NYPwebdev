@@ -15,7 +15,7 @@
  <div class="introsection">
 
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-md">
+    <div class="container-md p-0 m-0">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,7 +69,7 @@
        <div class="col-4">
          <div class="card p-4">
            <img src="images/egyptian.jpg" alt="Egyptian Tarot">
-           <h3>Egyptian<br/>Tarot Deck</h3>
+           <h3>Egyptian<br/>Tarot&nbsp;Deck</h3>
            <h6>$10.80</h6>
            <button onclick="createBillItem('Egyptian Tarot Deck', '10.80', 'images/egyptian.jpg', 1)" class="cart-btn">Add to Cart</button>
          </div>
@@ -87,7 +87,7 @@
        <div class="col-4">
          <div class="card p-4">
            <img src="images/latin.jpg" alt="Latin Tarot Deck">
-           <h3>Latin Tarot<br/>Deck</h3>
+           <h3>Latin Tarot&nbsp;Deck</h3>
            <h6>$13.70</h6>
            <button onclick="createBillItem('Latin Tarot Deck', '13.70', 'images/latin.jpg', 1)" class="cart-btn">Add to Cart</button>
          </div>
@@ -99,7 +99,7 @@
        <div class="col-4">
          <div class="card p-4">
            <img src="images/modern.jpg" alt="Modern Tarot Deck">
-           <h3>Modern Tarot Deck</h3>
+           <h3>Modern Tarot&nbsp;Deck</h3>
            <h6>$17.65</h6>
            <button onclick="createBillItem('Modern Tarot Deck', '17.65', 'images/modern.jpg', 1)" class="cart-btn">Add to Cart</button>
          </div>
@@ -108,7 +108,7 @@
        <div class="col-4">
          <div class="card p-4">
            <img src="images/riderwaite.jpg" alt="Rider Waite Tarot Deck">
-           <h3>Rider Waite Tarot Deck</h3>
+           <h3>Rider&nbsp;Waite Tarot&nbsp;Deck</h3>
            <h6>$8.18</h6>
            <button onclick="createBillItem('Rider Waite Tarot Deck', '8.18', 'images/riderwaite.jpg', 1)" class="cart-btn">Add to Cart</button>
          </div>
@@ -117,7 +117,7 @@
        <div class="col-4">
          <div class="card p-4">
            <img src="images/zombie.jpg" alt="Zombie Tarot Deck">
-           <h3>Zombie Tarot Deck</h3>
+           <h3>Zombie Tarot&nbsp;Deck</h3>
            <h6>$33.10</h6>
            <button onclick="createBillItem('Zombie Tarot Deck', '33.10', 'images/zombie.jpg', 1)" class="cart-btn">Add to Cart</button>
          </div>
@@ -129,18 +129,18 @@
    <!-- end of products -->
 
    <!-- start of bill -->
-   <div class="billmob container-fluid col-sm-3 col-12" id="bill">
-     <div class="col-sm-12 col">
-       <div class="row px-4" id="cart-items">
+   <div class="col-6 col-sm-3 p-0 m-0" id="bill">
+     <div class="col-sm-12 col p-0 m-0">
+       <div class="row p-0 m-0" id="cart-items">
          <div class="col-12">
            <div id="displayCart"></div>
          </div>
        </div>
-       <div class="row" id="costAndClose">
-         <a href="#" class="col-6" id="cost">
-           <span id="price-display">Checkout<br/>($0.00)</span>
+       <div class="row p-0 m-0" id="costAndClose">
+         <a href="#" id="cost">
+           <span class="col-6" id="price-display">Checkout<br/>($0.00)</span>
          </a>
-         <button class="col-6" onclick="closeBtn()">Close</button>
+         <button class="col-6" id="close" onclick="closeBtn()">Close</button>
        </div>
      </div>
    </div>

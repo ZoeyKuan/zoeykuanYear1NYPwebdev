@@ -25,7 +25,8 @@ function closeBtn(){
  var bill = document.getElementById("bill");
  revealBill = revealBill + 1;
  if (revealBill % 2 == 1) {
-   bill.style.display = "flex";
+   bill.style.display = "block";
+   bill.style.height = '100vh';
  } else {
    bill.style.display = "none";
  }
